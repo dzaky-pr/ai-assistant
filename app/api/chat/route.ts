@@ -30,7 +30,7 @@ export async function POST(req: Request) {
         statusText: 'Not Found'
       })
     }
-    if (provider === 'nuii-ai') {
+    if (provider === 'ai-assistant') {
       const userQuery = messages[messages.length - 1].content
       const response = await fetch(`${process.env.RUNPOD_SERVER_URL}/tanya`, {
         method: 'POST',
@@ -38,7 +38,7 @@ export async function POST(req: Request) {
         body: JSON.stringify({ query: userQuery })
       })
       if (!response.ok) {
-        throw new Error(`NUII API error: ${response.statusText}`)
+        throw new Error(`AI ASSISTANT error: ${response.statusText}`)
       }
       const data = await response.json()
 

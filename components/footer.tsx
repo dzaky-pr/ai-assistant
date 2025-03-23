@@ -35,8 +35,8 @@ const Footer: React.FC = () => {
       </div> */}
       <div className="flex items-center justify-center">
         <p className="text-[10px] text-muted-foreground text-center">
-          NUII AI Chatbot v.1.0.0 dapat membuat kesalahan. Periksa informasi
-          penting dengan cermat.
+          AI ASSISTANT Chatbot v.1.0.0 dapat membuat kesalahan. Periksa
+          informasi penting dengan cermat.
         </p>
       </div>
     </footer>

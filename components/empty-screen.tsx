@@ -7,8 +7,8 @@ const exampleMessages = [
     message: 'Siapakah Anda?'
   },
   {
-    heading: 'Bagaimana NUII Mendapatkan Informasi?',
-    message: 'Bagaimana NUII Mendapatkan Informasi?'
+    heading: 'Bagaimana AI Assistant Mendapatkan Informasi?',
+    message: 'Bagaimana AI Assistant Mendapatkan Informasi?'
   },
   {
     heading: 'Apa itu "Konstruksi Tiang TM-5C"?',

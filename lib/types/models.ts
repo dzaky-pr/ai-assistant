@@ -6,29 +6,35 @@ export interface Model {
 }
 
 export const models: Model[] = [
+  // {
+  //   id: 'skki-skko-ai',
+  //   name: 'SKKI SKKO AI',
+  //   provider: 'PLN AI Models',
+  //   providerId: 'ai-assistant'
+  // },
+  // {
+  //   id: 'sdm-ai',
+  //   name: 'SDM AI',
+  //   provider: 'PLN AI Models',
+  //   providerId: 'ai-assistant'
+  // },
+  // {
+  //   id: 'niaga-ai',
+  //   name: 'NIAGA AI',
+  //   provider: 'PLN AI Models',
+  //   providerId: 'ai-assistant'
+  // },
+  // {
+  //   id: 'jaringan-ai',
+  //   name: 'JARINGAN AI',
+  //   provider: 'PLN AI Models',
+  //   providerId: 'ai-assistant'
+  // },
   {
-    id: 'skki-skko-ai',
-    name: 'SKKI SKKO AI',
+    id: 'ai-assistant',
+    name: 'AI ASSISTANT 1.0',
     provider: 'PLN AI Models',
-    providerId: 'nuii-ai'
-  },
-  {
-    id: 'sdm-ai',
-    name: 'SDM AI',
-    provider: 'PLN AI Models',
-    providerId: 'nuii-ai'
-  },
-  {
-    id: 'niaga-ai',
-    name: 'NIAGA AI',
-    provider: 'PLN AI Models',
-    providerId: 'nuii-ai'
-  },
-  {
-    id: 'jaringan-ai',
-    name: 'JARINGAN AI',
-    provider: 'PLN AI Models',
-    providerId: 'nuii-ai'
+    providerId: 'ai-assistant'
   },
   {
     id: 'llama-3.3-70b-versatile',

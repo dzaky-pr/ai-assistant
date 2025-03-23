@@ -68,14 +68,14 @@ export default function PwaDownloadAnnouncement() {
     showInstallModal && (
       <div
         className={clsxm(
-          'flex justify-between dark:bg-yellow-600 bg-yellow-300  px-5 py-3 shadow-xl'
+          'flex justify-between dark:bg-yellow-600 bg-yellow-300  px-5 py-3'
         )}
       >
         <div></div>
         <div className="flex flex-col gap-x-2 gap-y-2.5 md:flex-row">
           <p className="inline-flex items-center gap-x-2 text-sm font-semibold sm:text-base">
             <FiInfo className="h-5 w-5" />
-            Unduh aplikasi NUII AI sekarang!
+            Unduh aplikasi AI Assistant sekarang!
           </p>
           <Button
             onClick={handleInstallClick}

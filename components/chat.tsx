@@ -37,7 +37,7 @@ export function Chat({
   // Update dynamicStreamProtocol ketika selectedModelId berubah
   useEffect(() => {
     setDynamicStreamProtocol(
-      selectedModelId === 'nuii-ai:nuii-ai' ? 'text' : 'data'
+      selectedModelId === 'ai-assistant:ai-assistant' ? 'text' : 'data'
     )
   }, [selectedModelId])
 
@@ -45,7 +45,7 @@ export function Chat({
   const handleSearchModeToggle = (isSearchMode: boolean) => {
     const newModelId = isSearchMode
       ? 'groq:llama-3.3-70b-versatile'
-      : 'nuii-ai:nuii-ai'
+      : 'ai-assistant:ai-assistant'
     setCookie('selected-model', newModelId)
     setSelectedModelId(newModelId)
   }

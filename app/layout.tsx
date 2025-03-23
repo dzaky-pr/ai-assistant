@@ -15,11 +15,11 @@ const fontSans = FontSans({
   variable: '--font-sans'
 })
 
-const APP_NAME = 'NUII AI'
-const APP_DEFAULT_TITLE = 'NUII AI'
-const APP_TITLE_TEMPLATE = '%s - NUII AI'
+const APP_NAME = 'AI ASSISTANT'
+const APP_DEFAULT_TITLE = 'AI ASSISTANT'
+const APP_TITLE_TEMPLATE = '%s - AI ASSISTANT'
 const APP_DESCRIPTION = 'Standar Konstruksi by Artificial Intelligence'
-const APP_URL = 'https://nuii-ai.vercel.app'
+const APP_URL = 'https://ai-assistant.vercel.app'
 
 export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   },
   authors: [
     {
-      name: 'nuii-ai',
+      name: 'ai-assistant',
       url: APP_URL
     }
   ]
@@ -101,7 +101,7 @@ export default function RootLayout({
             sizes="180x180"
             href="/favicon/apple-touch-icon.png"
           />
-          <meta name="apple-mobile-web-app-title" content="NUII AI" />
+          <meta name="apple-mobile-web-app-title" content="AI ASSISTANT" />
         </head>
         <body className={cn('font-sans antialiased', fontSans.variable)}>
           <ThemeProvider

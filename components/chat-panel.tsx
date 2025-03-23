@@ -8,7 +8,6 @@ import { useEffect, useRef, useState } from 'react'
 import Textarea from 'react-textarea-autosize'
 import { EmptyScreen } from './empty-screen'
 import Footer from './footer'
-import { ModelSelector } from './model-selector'
 import { SearchModeToggle } from './search-mode-toggle'
 import { Button } from './ui/button'
 import { IconLogo } from './ui/icons'
@@ -144,11 +143,11 @@ export function ChatPanel({
             {/* Area menu bawah */}
             <div className="flex gap-2 sm:gap-0 sm:flex-row flex-col items-center flex-wrap justify-between p-3">
               <div className="flex items-center gap-2 w-full sm:w-fit justify-start">
-                <ModelSelector
-                  isSearchMode={isSearchMode}
-                  selectedModelId={selectedModelId}
-                  onModelSelect={onModelSelect}
-                />
+                {/* <ModelSelector
+                    isSearchMode={isSearchMode}
+                    selectedModelId={selectedModelId}
+                    onModelSelect={onModelSelect}
+                  /> */}
                 <SearchModeToggle onToggle={handleSearchModeToggle} />
               </div>
               <div className="flex items-center gap-2 w-full sm:w-fit justify-end">

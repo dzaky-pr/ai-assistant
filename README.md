@@ -1,6 +1,6 @@
-# NUII AI
+# AI ASSISTANT
 
-NUII AI
+AI ASSISTANT
 
 ## Format
 

@@ -5,7 +5,7 @@ import { createOllama } from 'ollama-ai-provider'
 
 export const registry = createProviderRegistry({
   groq,
-  'nuii-ai': createOllama({
+  'ai-assistant': createOllama({
     baseURL: `${process.env.RUNPOD_SERVER_URL}`
   })
 })
@@ -13,7 +13,7 @@ export const registry = createProviderRegistry({
 export function getModel(model: string) {
   const modelName = model.split(':')[1]
   if (model.includes('ollama')) {
-    if (model.includes('nuii-ai')) {
+    if (model.includes('ai-assistant')) {
       const ollama = createOllama({
         baseURL: `${process.env.RUNPOD_SERVER_URL}/tanya`
       })
@@ -32,7 +32,7 @@ export function isProviderEnabled(providerId: string): boolean {
   switch (providerId) {
     case 'groq':
       return !!process.env.GROQ_API_KEY
-    case 'nuii-ai':
+    case 'ai-assistant':
       return true
     default:
       return false

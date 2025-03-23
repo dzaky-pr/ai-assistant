@@ -1,15 +1,15 @@
 name: ✨ Feature Request
-description: Propose a new feature for NUII.
+description: Propose a new feature for AI Assistant.
 labels: []
 body:
   - type: markdown
     attributes:
       value: |
-        This template is to propose new features for NUII. Please fill out the following information to help us understand your feature request.
+        This template is to propose new features for AI Assistant. Please fill out the following information to help us understand your feature request.
   - type: textarea
     attributes:
       label: Feature Description
-      description: A detailed description of the feature you are proposing for NUII. Include any relevant technical details.
+      description: A detailed description of the feature you are proposing for AI Assistant. Include any relevant technical details.
       placeholder: |
         Feature description...
     validations:
