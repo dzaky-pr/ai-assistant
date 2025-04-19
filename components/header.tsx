@@ -4,7 +4,6 @@ import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
 import { headers } from 'next/headers'
 import Link from 'next/link'
 import HistoryContainer from './history-container'
-import { ModeToggle } from './mode-toggle'
 import { IconLogo } from './ui/icons'
 import UserButtonCustom from './user-button'
 
@@ -43,7 +42,7 @@ export const Header: React.FC = async () => {
             </div>
           </SignedIn>
         </div>
-        <ModeToggle />
+        {/* <ModeToggle /> */}
         {pathname === '/dashboard/chat' && (
           <HistoryContainer location="header" />
         )}
