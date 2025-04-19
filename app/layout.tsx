@@ -2,7 +2,6 @@ import Header from '@/components/header'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/sonner'
 import { cn } from '@/lib/utils'
-import { dark } from '@clerk/themes'
 import type { Metadata, Viewport } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 import './globals.css'
@@ -80,11 +79,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <ClerkProvider
-      appearance={{
-        baseTheme: dark
-      }}
-    >
+    <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <head>
           <link rel="manifest" href="/manifest.json" />
@@ -106,7 +101,7 @@ export default function RootLayout({
         <body className={cn('font-sans antialiased', fontSans.variable)}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="light"
             enableSystem
             disableTransitionOnChange
           >

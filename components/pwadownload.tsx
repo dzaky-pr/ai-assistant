@@ -17,12 +17,6 @@ export default function PwaDownloadAnnouncement() {
   >(null)
   const pathname = usePathname()
   const validatePathname = pathname === '/'
-  // pathname === '/try-out' ||
-  // pathname === '/webinar' ||
-  // pathname === '/info-pai' ||
-  // pathname === '/auth/masuk' ||
-  // pathname === '/auth/daftar' ||
-  // pathname === '/auth/daftar/data-diri'
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (event: any) => {
