@@ -28,7 +28,7 @@ export default function Page() {
       <PwaDownloadAnnouncement />
       <div className="flex flex-col h-full bg-background container mx-auto">
         {/* Hero */}
-        <header className="relative flex flex-col items-center justify-center h-[80vh] text-center px-4 overflow-hidden">
+        <header className="relative flex flex-col items-center justify-center h-screen text-center px-4 overflow-hidden">
           {/* Background Effects */}
           <Particles
             className="absolute inset-0 z-0"
@@ -39,7 +39,7 @@ export default function Page() {
           />
           <Globe className="absolute z-10 top-1/4 left-1/2 -translate-x-1/2  opacity-100" />
 
-          <div className="z-20 flex justify-center items-center flex-col">
+          <div className="z-20 flex justify-center items-center py-16 flex-col">
             <div className="group mb-4 w-fit relative mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f] ">
               <span
                 className={cn(
@@ -85,8 +85,8 @@ export default function Page() {
         </header>
 
         {/* Detail Section */}
-        <section className="flex flex-col items-center py-16 bg-background">
-          <h2 className="text-3xl font-semibold mb-8">
+        <section className="flex flex-col items-center py-36 bg-background">
+          <h2 className="text-3xl text-center font-semibold mb-8">
             Cara Kerja AI Assistant
           </h2>
 

@@ -2,10 +2,11 @@
 
 import { cn } from '@/lib/utils'
 import { Message } from 'ai'
-import { ChevronUpIcon, MessageCirclePlus, Square } from 'lucide-react'
+import { MessageCirclePlus, Send, Square } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import Textarea from 'react-textarea-autosize'
+import { BorderBeam } from './border-beam'
 import { EmptyScreen } from './empty-screen'
 import Footer from './footer'
 import { SearchModeToggle } from './search-mode-toggle'
@@ -166,14 +167,11 @@ export function ChatPanel({
                   disabled={input.length === 0 && !isLoading}
                   onClick={isLoading ? stop : undefined}
                 >
-                  {isLoading ? (
-                    <Square size={20} />
-                  ) : (
-                    <ChevronUpIcon size={20} />
-                  )}
+                  {isLoading ? <Square size={20} /> : <Send size={20} />}
                 </Button>
               </div>
             </div>
+            <BorderBeam duration={20} size={200} />
           </div>
 
           {messages.length === 0 && (
