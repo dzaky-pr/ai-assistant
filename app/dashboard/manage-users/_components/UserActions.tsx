@@ -17,7 +17,7 @@ export function UserActions({
 }) {
   const [modalOpen, setModalOpen] = useState(false)
   const [action, setAction] = useState<
-    'admin' | 'pengawas' | 'surveyor' | 'remove' | null
+    'admin' | 'basic_user' | 'remove' | null
   >(null)
   const [pending, startTransition] = useTransition()
 
@@ -59,23 +59,15 @@ export function UserActions({
         >
           Make Admin
         </Button>
+
         <Button
           onClick={() => {
-            setAction('pengawas')
-            setModalOpen(true)
-          }}
-          className="bg-yellow-500 px-3 py-1 rounded hover:bg-yellow-600"
-        >
-          Make Pengawas
-        </Button>
-        <Button
-          onClick={() => {
-            setAction('surveyor')
+            setAction('basic_user')
             setModalOpen(true)
           }}
           className="bg-green-500 px-3 py-1 rounded hover:bg-green-600"
         >
-          Make Surveyor
+          Make Basic User
         </Button>
         <Button
           onClick={() => {
@@ -127,9 +119,7 @@ export function UserActions({
                 className={`px-4 py-2 rounded-lg ${
                   action === 'admin'
                     ? 'bg-blue-500 hover:bg-blue-600'
-                    : action === 'pengawas'
-                    ? 'bg-yellow-500 hover:bg-yellow-600'
-                    : action === 'surveyor'
+                    : action === 'basic_user'
                     ? 'bg-green-500 hover:bg-green-600'
                     : 'bg-red-500 hover:bg-red-600'
                 }`}

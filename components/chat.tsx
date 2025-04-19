@@ -25,10 +25,19 @@ export function Chat({
 
   // Baca cookie model sekali saat mount
   useEffect(() => {
+    if (getCookie('search-mode') === undefined) {
+      setCookie('search-mode', 'false')
+    }
+
     const modelFromCookie = getCookie('selected-model')
+    const searchMode = getCookie('search-mode') === 'true'
+
     if (!modelFromCookie) {
-      setCookie('selected-model', 'groq:llama-3.3-70b-versatile')
-      setSelectedModelId('groq:llama-3.3-70b-versatile')
+      const defaultModel = searchMode
+        ? 'groq:llama-3.3-70b-versatile'
+        : 'ai-assistant:ai-assistant'
+      setCookie('selected-model', defaultModel)
+      setSelectedModelId(defaultModel)
     } else {
       setSelectedModelId(modelFromCookie)
     }

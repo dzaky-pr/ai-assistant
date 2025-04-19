@@ -2,7 +2,7 @@
 
 import { cn } from '@/lib/utils'
 import { Message } from 'ai'
-import { ArrowUp, MessageCirclePlus, Square } from 'lucide-react'
+import { ChevronUpIcon, MessageCirclePlus, Square } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import Textarea from 'react-textarea-autosize'
@@ -143,11 +143,6 @@ export function ChatPanel({
             {/* Area menu bawah */}
             <div className="flex gap-2 sm:gap-0 sm:flex-row flex-col items-center flex-wrap justify-between p-3">
               <div className="flex items-center gap-2 w-full sm:w-fit justify-start">
-                {/* <ModelSelector
-                    isSearchMode={isSearchMode}
-                    selectedModelId={selectedModelId}
-                    onModelSelect={onModelSelect}
-                  /> */}
                 <SearchModeToggle onToggle={handleSearchModeToggle} />
               </div>
               <div className="flex items-center gap-2 w-full sm:w-fit justify-end">
@@ -171,7 +166,11 @@ export function ChatPanel({
                   disabled={input.length === 0 && !isLoading}
                   onClick={isLoading ? stop : undefined}
                 >
-                  {isLoading ? <Square size={20} /> : <ArrowUp size={20} />}
+                  {isLoading ? (
+                    <Square size={20} />
+                  ) : (
+                    <ChevronUpIcon size={20} />
+                  )}
                 </Button>
               </div>
             </div>

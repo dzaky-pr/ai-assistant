@@ -24,7 +24,7 @@ export default function AccessGuard({ children }: AccessGuardProps) {
       } else if (!role) {
         toast.error('Anda belum diverifikasi oleh Admin!')
         router.push('/')
-      } else if (!['admin', 'pengawas', 'surveyor'].includes(role)) {
+      } else if (!['admin', 'basic_user'].includes(role)) {
         toast.error('Akses ditolak!')
         router.push('/')
       }
@@ -37,7 +37,7 @@ export default function AccessGuard({ children }: AccessGuardProps) {
     return <Spinner />
   }
 
-  if (['admin', 'pengawas', 'surveyor'].includes(role)) {
+  if (['admin', 'basic_user'].includes(role)) {
     return <>{children}</>
   }
 
