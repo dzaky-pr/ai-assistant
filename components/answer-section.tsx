@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { CollapsibleMessage } from './collapsible-message'
 import { DefaultSkeleton } from './default-skeleton'
 import { BotMessage } from './message'
@@ -61,7 +60,7 @@ export function AnswerSection({
         ) : (
           <DefaultSkeleton />
         )}
-        {images.length > 0 &&
+        {/* {images.length > 0 &&
           images.map((img, index) => (
             <div key={index} className="mt-4">
               <Image
@@ -73,7 +72,7 @@ export function AnswerSection({
               />
             </div>
           ))}
-        {images.length > 0 && <p>Gambar: {images.join(', ')}</p>}
+        {images.length > 0 && <p>Gambar: {images.join(', ')}</p>} */}
         <MessageActions
           message={parsed.answer || content}
           chatId={chatId}
