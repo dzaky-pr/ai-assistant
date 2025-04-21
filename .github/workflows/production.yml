@@ -21,22 +21,13 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            set -e
             cd /var/www/nuii/ai-assistant
             git reset --hard origin/main
             git clean -fd
             git pull origin main
-
-            echo "Contents of $(pwd):"
-            ls -la
-
-            if [ -f package.json ]; then
-              bun install
-            else
-              echo "❌ package.json not found; aborting"
-              exit 1
-            fi
-
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            bun install
             rm -rf .next
             bun run build
             pm2 restart ai-assistant
